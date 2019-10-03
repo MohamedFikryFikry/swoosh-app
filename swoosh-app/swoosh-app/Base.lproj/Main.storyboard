@@ -107,7 +107,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr3-3j-Z5l" customClass="BorderButtons" customModule="swoosh_app" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr3-3j-Z5l" customClass="BorderButtons" customModule="swoosh_app" customModuleProvider="target">
                                 <rect key="frame" x="16" y="649" width="382" height="37"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.39645686619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
@@ -128,6 +128,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTappedMens:" destination="Mzg-Ay-sUc" eventType="touchUpInside" id="ESf-7a-qr9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-un-aEL" customClass="BorderButtons" customModule="swoosh_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="58" width="382" height="37"/>
@@ -136,6 +139,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTappedWomens:" destination="Mzg-Ay-sUc" eventType="touchUpInside" id="cIJ-oA-84o"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWu-2y-ycp" customClass="BorderButtons" customModule="swoosh_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="382" height="37"/>
@@ -144,6 +150,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTappedCoed:" destination="Mzg-Ay-sUc" eventType="touchUpInside" id="EPl-t5-j9t"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -180,6 +189,7 @@
                         <viewLayoutGuide key="safeArea" id="ywP-VB-VXy"/>
                     </view>
                     <connections>
+                        <outlet property="NxtBtn" destination="Jr3-3j-Z5l" id="ByI-kt-5ea"/>
                         <segue destination="3Bw-rD-Dhx" kind="show" identifier="SkillVCSegue" id="67E-e0-7W3"/>
                     </connections>
                 </viewController>

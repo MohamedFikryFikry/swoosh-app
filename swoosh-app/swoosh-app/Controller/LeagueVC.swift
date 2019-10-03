@@ -10,10 +10,16 @@ import UIKit
 
 class LeagueVC: UIViewController {
 
+    //declaration
+    var player:Player!
+    
+    @IBOutlet weak var NxtBtn: BorderButtons!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //initilize struct
+        player = Player()
     }
     
 
@@ -21,5 +27,30 @@ class LeagueVC: UIViewController {
         performSegue(withIdentifier: "SkillVCSegue", sender: self)
     }
     
-
+    @IBAction func onTappedMens(_ sender: Any)
+    {
+       //player.desiedLeague = "men"
+       //NxtBtn.isEnabled = true
+        showDesiredLeague(leaguetype: "men")
+    }
+    
+    @IBAction func onTappedWomens(_ sender: Any)
+    {
+        //player.desiedLeague = "women"
+        //NxtBtn.isEnabled = true
+        showDesiredLeague(leaguetype: "women")
+    }
+    
+    @IBAction func onTappedCoed(_ sender: Any)
+    {
+       // player.desiedLeague = "coed"
+       // NxtBtn.isEnabled = true
+        showDesiredLeague(leaguetype: "coed")
+    }
+    
+    func showDesiredLeague(leaguetype:String)
+    {
+        player.desiedLeague = leaguetype
+        NxtBtn.isEnabled = true
+    }
 }
